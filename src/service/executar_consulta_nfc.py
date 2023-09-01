@@ -47,7 +47,7 @@ def executar_consulta_nfc(parametro, data_param):
                     break
 
                 except Exception as e:
-                    resultados.append(f"Erro ao executar a consulta NFC para {empresa}: na tentativa {tentativas + 1}")
+                    resultados.append(f"Erro ao executar a consulta NFC para {empresa}: na tentativa {tentativas + 1}\n")
                     tentativas += 1 
 
                     if tentativas > max_tentativas:  # Atualiza a empresa com mais tentativas
@@ -87,6 +87,6 @@ def executar_consulta_nfc(parametro, data_param):
                     break
 
                 except Exception as e:
-                    resultados.append(f"Erro ao executar a consulta NFC na tentativa {tentativas + 1}")
+                    resultados.append(f"Erro ao executar a consulta NFC na tentativa {tentativas + 1}\n")
                     tentativas += 1 
             return resultados      
